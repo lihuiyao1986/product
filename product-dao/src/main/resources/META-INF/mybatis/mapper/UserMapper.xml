@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.fund.product.dao.UserDAO">
+	<resultMap type="UserInfo" id="UserInfoMap">
+		<!-- column:库表的字段名 property:实体类里的属性名 -->
+		<id column="User_Id" property="userId" />
+		<result column="User_Phone" property="userPhone" />
+		<result column="User_NickName" property="userNickName" />
+		<result column="User_Name" property="userName" />
+		<result column="User_Sex" property="userSex" />
+		<result column="User_Birthday" property="userBirthday" />
+		<result column="User_Avatar" property="userAvatar" />
+		<result column="User_Password" property="userPassword" />
+		<result column="UpdateTime" property="updateTime" />
+		<result column="CreateTime" property="createTime" />
+		<result column="User_Status" property="userStatus" />
+	</resultMap>
+	<select id="getUser">
+	    select * from T_USER t
+	</select>
+</mapper>

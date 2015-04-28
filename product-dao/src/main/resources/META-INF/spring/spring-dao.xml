@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 扫描业务组件 -->
+	<context:component-scan base-package="com.hundsun.fund.product.dao">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Component" />
+	</context:component-scan>
+
+	<!-- 配置文件 -->
+	<context:property-placeholder location="classpath:database.properties"
+		ignore-unresolvable="true" />
+
+	<!-- druid dataSource -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="driverClassName" value="${datasource.driverClassName}" />
+		<property name="url" value="${datasource.url}" />
+		<property name="username" value="${datasource.username}" />
+		<property name="password" value="${datasource.password}" />
+		<!-- pass decrypt -->
+		<property name="filters" value="config" />
+		<property name="connectionProperties" value="config.decrypt=true" />
+		<property name="maxActive" value="${druid.maxActive}" />
+		<property name="initialSize" value="${druid.initialSize}" />
+		<property name="maxWait" value="${druid.maxWait}" />
+		<property name="minIdle" value="${druid.minIdle}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${druid.timeBetweenEvictionRunsMillis}" />
+		<property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}" />
+		<property name="validationQuery" value="${druid.validationQuery}" />
+		<property name="testWhileIdle" value="${druid.testWhileIdle}" />
+		<property name="testOnBorrow" value="${druid.testOnBorrow}" />
+		<property name="testOnReturn" value="${druid.testOnReturn}" />
+		<property name="removeAbandoned" value="${druid.removeAbandoned}" />
+		<property name="removeAbandonedTimeout" value="${druid.removeAbandonedTimeout}" />
+	</bean>
+
+	<!-- myBatis配置 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:META-INF/mybatis/mybatisConfig.xml" />
+		<property name="mapperLocations" value="classpath:META-INF/mybatis/mapper/*.xml" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="typeAliasesPackage" value="com.hundsun.fund.product.model.dao"></property>
+		<property name="plugins">
+			<list>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+							reasonable=true
+						</value>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!-- spring与mybatis整合配置，扫描所有dao -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+		p:basePackage="com.hundsun.fund.product.dao"
+		p:sqlSessionFactoryBeanName="sqlSessionFactory"/>
+
+	<!-- 事务 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 事务注解驱动 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>
