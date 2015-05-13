@@ -1,0 +1,5 @@
+com/hundsun/fund/provider/redis/service/BaseRedisService.class
+com/hundsun/fund/provider/redis/client/RedisShardingClient.class
+com/hundsun/fund/provider/redis/context/AtomRedisPool.class
+com/hundsun/fund/provider/redis/model/User.class
+com/hundsun/fund/provider/redis/context/RedisAbstractTemplate.class

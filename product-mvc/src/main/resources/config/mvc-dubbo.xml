@@ -11,5 +11,10 @@
 	<!-- 注册中心的配置 -->
 	<dubbo:registry address="${dubbo.registry.address}" check="false" file="false" />
 	<!-- 用户service -->
-	<dubbo:reference id="userService" interface="com.hundsun.fund.product.api.user.IUserService" version="${dubbo.interface.version}" check="false" />
+	<dubbo:reference id="userService" interface="com.hundsun.fund.product.api.user.service.IUserService" version="${dubbo.interface.version}" check="false" />
+    <!-- 产品service -->
+	<dubbo:reference id="productServie" interface="com.hundsun.fund.product.api.product.service.IProductService" version="${dubbo.interface.version}" check="false" />
+    <!-- 公共service -->
+    <dubbo:reference id="commonServie" interface="com.hundsun.fund.api.common.service.ICommonService" version="${dubbo.interface.version}" check="false" />
+    
 </beans>

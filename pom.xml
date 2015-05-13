@@ -98,6 +98,8 @@
 		<jmockit_version>1.7</jmockit_version>
 		<pagehelper.version>3.7.0</pagehelper.version>
 		<jsqlparser.version>0.9.1</jsqlparser.version>
+		<spring-data-redis-version>1.0.2.RELEASE</spring-data-redis-version>
+		<ehcache-spring-annotations.version>1.1.2</ehcache-spring-annotations.version>
 		<project.build.sourceEncoding>${file_encoding}</project.build.sourceEncoding>
 		<ncb_snapshots_distribution_repository>http://192.168.1.144:8081/nexus/content/repositories/snapshots/</ncb_snapshots_distribution_repository>
 		<ncb_releases_distribution_repository>http://192.168.1.144:8081/nexus/content/repositories/releases/</ncb_releases_distribution_repository>
@@ -196,6 +198,11 @@
 				<groupId>com.github.jsqlparser</groupId>
 				<artifactId>jsqlparser</artifactId>
 				<version>${jsqlparser.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-redis</artifactId>
+				<version>${spring-data-redis-version}</version>
 			</dependency>
 			<!-- Common libs -->
 			<dependency>
@@ -692,7 +699,6 @@
 		<module>product-mvc</module>
 		<module>product-provider</module>
 		<module>product-commons</module>
-		<module>product-model</module>
 		<module>provider-redis</module>
 		<module>provider-mongo</module>
 	</modules>

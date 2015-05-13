@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.fund.product.dao.mapper.CommonMapper">
+
+	<!-- *********************字典 begin*********************** -->
+
+	<!-- 字典对应的resultMap -->
+	<resultMap type="DictDaoDaoModel" id="DictDaoDaoMap">
+		<id column="f_id" property="id" />
+		<result column="f_dict_code" property="dictCode" />
+		<result column="f_dict_name" property="dictName" />
+		<result column="f_dict_value" property="dictValue" />
+	</resultMap>
+	
+	<!-- 查询字典的字段 -->
+	<sql id="query_dict_fields">
+	    f_id,
+	    f_dict_code,
+	    f_dict_name,
+	    f_dict_value
+	</sql>
+	
+	<!-- 按照字典代码查询字典的信息 -->
+	<select id="queryDictByCode" parameterType="String" resultMap="DictDaoDaoMap">
+	    select 
+	    <include refid="query_dict_fields"/>
+	    from t_dictionary
+	    where f_dict_code = #{dictCode,jdbcType=BIGINT}
+	    and f_dict_name != '#'
+	</select>
+	<!-- *********************字典 end*********************** -->
+
+</mapper>

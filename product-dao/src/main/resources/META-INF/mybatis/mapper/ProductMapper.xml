@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.fund.product.dao.mapper.ProductMapper">
+
+	<!-- *********************产品信息 begin*********************** -->
+	<!-- 产品信息 -->
+	<resultMap type="ProductDaoModel" id="ProductInfoMap">
+		<!-- column:库表的字段名 property:实体类里的属性名 -->
+		<id column="f_product_id" property="id" />
+		<result column="f_product_code" property="productCode" />
+		<result column="f_product_name" property="productName" />
+		<result column="f_product_year_income_rate" property="yearIncomeRate" />
+		<result column="f_product_limit" property="limit" />
+		<result column="f_product_min_invest_sum" property="minInvestSum" />
+		<result column="f_product_sale_start_time" property="saleStartTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_sale_end_time" property="saleEndTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_overdue_time" property="overdueTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_verify_status" property="verifyStatus" />
+		<result column="f_product_type" property="type" />
+		<result column="f_product_sale_total_sum" property="saleTotalSum" />
+		<result column="f_product_sale_remain_sum" property="saleRemainSum" />
+		<result column="f_product_sale_saled_sum" property="saleSaledSum" />
+		<result column="f_product_risk_type" property="riskType" />
+		<result column="f_product_interest_pay_way_desc" property="interestPayDesc" />
+		<result column="f_product_desc" property="productDesc" />
+		<result column="f_product_org_name" property="orgName" />
+		<result column="f_product_memo" property="memo" />
+	</resultMap>
+	
+	<!-- 产品查询结果map -->
+	<resultMap type="ProductListQueryResultModel" id="ProductListQueryRespMap">
+	    <id column="f_product_id" property="id" />
+		<result column="f_product_code" property="productCode" />
+		<result column="f_product_name" property="productName" />
+		<result column="f_product_year_income_rate" property="yearIncomeRate" />
+		<result column="f_product_limit" property="limit" />
+		<result column="f_product_min_invest_sum" property="minInvestSum" />
+		<result column="f_product_sale_start_time" property="saleStartTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_sale_end_time" property="saleEndTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_overdue_time" property="overdueTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_verify_status" property="verifyStatus" />
+		<result column="f_product_type" property="type" />
+		<result column="f_product_sale_total_sum" property="saleTotalSum" />
+		<result column="f_product_sale_remain_sum" property="saleRemainSum" />
+		<result column="f_product_sale_saled_sum" property="saleSaledSum" />
+		<result column="f_product_risk_type" property="riskType" />
+		<result column="f_product_interest_pay_way_desc" property="interestPayDesc" />
+		<result column="f_product_desc" property="productDesc" />
+		<result column="f_product_org_name" property="orgName" />
+		<result column="f_product_memo" property="memo" />
+		<result column="distance" property="distance"/>
+	</resultMap>
+	
+	<!-- 产信息查询字段 -->
+	<sql id="Base_ProductInfo_Column_List">
+		f_product_id, f_product_code,
+		f_product_name,f_product_org_name,
+		f_product_year_income_rate,
+		f_product_limit, f_product_min_invest_sum,
+		f_product_sale_start_time,f_product_sale_end_time,f_product_overdue_time,
+		f_product_verify_status,f_product_type,f_product_sale_total_sum,
+		f_product_sale_remain_sum,f_product_sale_saled_sum,f_product_risk_type,
+		f_product_interest_pay_way_desc,f_product_desc,f_product_memo
+	</sql>
+	
+	<!-- 按照收益率查询产品信息列表 -->
+	<select id="queryMostIncomeProductList" resultMap="ProductListQueryRespMap" parameterType="ProductListQueryParamModel">
+	    select t5.f_product_id, t5.f_product_code, 
+	    t5.f_product_name, t5.f_product_org_name,
+        t5.f_product_year_income_rate,t5.f_product_limit, 
+        t5.f_product_min_invest_sum,t5.f_product_sale_start_time,
+        t5.f_product_sale_end_time,t5.f_product_overdue_time,
+        t5.f_product_verify_status,t5.f_product_type,
+        t5.f_product_sale_total_sum,t5.f_product_sale_remain_sum,
+        t5.f_product_sale_saled_sum,t5.f_product_risk_type,
+        t5.f_product_interest_pay_way_desc,t5.f_product_desc,
+        t5.f_product_memo
+        from 
+        t_product_info t5,
+        (
+           select  t2.f_product_id from t_product_saleorg_planner t2,
+              (
+                select f_sale_org_id from t_sale_org t1 where t1.f_sale_org_city = '${city}'
+              ) t3 
+              where t2. f_sale_org_id = t3.f_sale_org_id
+        ) t4
+        where t5.f_product_id = t4.f_product_id 
+        and t5.f_product_verify_status = '01'
+        and t5.f_product_overdue_time >= curdate()
+        <if test="minLimit!=null and minLimit!=''">
+            <![CDATA[
+            and t5.f_product_limit >= #{minLimit,jdbcType=BIGINT} 
+            ]]>
+        </if>
+        <if test="maxLimit!=null and maxLimit!=''">
+            <![CDATA[
+            and t5.f_product_limit <= #{maxLimit,jdbcType=BIGINT} 
+            ]]>
+        </if>
+        <if test="productType!=null and productType!=''">
+            <![CDATA[
+            and t5.f_product_type = #{productType,jdbcType=VARCHAR} 
+            ]]>
+        </if>
+        order by t5.f_product_year_income_rate desc
+	</select>
+	
+	<!-- 查询即将到期的产品信息列表 -->
+	<select id="queryMostOverDueProductList" resultMap="ProductListQueryRespMap" parameterType="ProductListQueryParamModel">
+	     select t5.f_product_id, t5.f_product_code, 
+	    t5.f_product_name, t5.f_product_org_name,
+        t5.f_product_year_income_rate,t5.f_product_limit, 
+        t5.f_product_min_invest_sum,t5.f_product_sale_start_time,
+        t5.f_product_sale_end_time,t5.f_product_overdue_time,
+        t5.f_product_verify_status,t5.f_product_type,
+        t5.f_product_sale_total_sum,t5.f_product_sale_remain_sum,
+        t5.f_product_sale_saled_sum,t5.f_product_risk_type,
+        t5.f_product_interest_pay_way_desc,t5.f_product_desc,
+        t5.f_product_memo
+        from 
+        t_product_info t5,
+        (
+           select  t2.f_product_id from t_product_saleorg_planner t2,
+              (
+                select f_sale_org_id from t_sale_org t1 where t1.f_sale_org_city = '${city}'
+              ) t3 
+              where t2. f_sale_org_id = t3.f_sale_org_id
+        ) t4
+        where t5.f_product_id = t4.f_product_id 
+        and t5.f_product_verify_status = '01'
+        and t5.f_product_overdue_time >= curdate()
+        <if test="minLimit!=null and minLimit!=''">
+            <![CDATA[
+            and t5.f_product_limit >= #{minLimit,jdbcType=BIGINT} 
+            ]]>
+        </if>
+        <if test="maxLimit!=null and maxLimit!=''">
+            <![CDATA[
+            and t5.f_product_limit <= #{maxLimit,jdbcType=BIGINT} 
+            ]]>
+        </if>
+        <if test="productType!=null and productType!=''">
+            <![CDATA[
+            and t5.f_product_type = #{productType,jdbcType=VARCHAR} 
+            ]]>
+        </if>
+        order by t5.f_product_overdue_time
+	</select>
+	
+	<!-- 查询附近的产品信息 -->
+	<select id="queryMostNearProductList" resultMap="ProductListQueryRespMap"  parameterType="ProductListQueryParamModel">
+	    select t5.f_product_id, t5.f_product_code,
+	    t5.f_product_name, t5.f_product_org_name,
+        t5.f_product_year_income_rate,t5.f_product_limit, 
+        t5.f_product_min_invest_sum,t5.f_product_sale_start_time,
+        t5.f_product_sale_end_time,t5.f_product_overdue_time,
+        t5.f_product_verify_status,t5.f_product_type,
+        t5.f_product_sale_total_sum,t5.f_product_sale_remain_sum,
+        t5.f_product_sale_saled_sum,t5.f_product_risk_type,
+        t5.f_product_interest_pay_way_desc,t5.f_product_desc,
+        t5.f_product_memo,t4.distance
+        from 
+        t_product_info t5,
+        (
+            select t3.f_product_id,t2.distance from t_product_saleorg_planner t3,
+            (
+              select t1.f_sale_org_id,t1.distance from 
+               (
+                 select f_sale_org_id,getDistance(f_sale_org_latitude,f_sale_org_longtitude,'${latitude}','${longtitude}') as distance from t_sale_org
+	           ) 
+	           <![CDATA[
+	            t1 where t1.distance < ${distance}
+	            ]]>
+             ) t2
+	        where t3.f_sale_org_id = t2.f_sale_org_id
+	    ) t4
+        where t5.f_product_id = t4.f_product_id 
+        and t5.f_product_verify_status = '01'
+        and t5.f_product_overdue_time >= curdate()
+        <if test="minLimit!=null and minLimit!=''">
+            <![CDATA[
+            and t5.f_product_limit >= #{minLimit,jdbcType=BIGINT} 
+            ]]>
+        </if>
+        <if test="maxLimit!=null and maxLimit!=''">
+            <![CDATA[
+            and t5.f_product_limit <= #{maxLimit,jdbcType=BIGINT} 
+            ]]>
+        </if>
+        <if test="productType!=null and productType!=''">
+            <![CDATA[
+            and t5.f_product_type = #{productType,jdbcType=VARCHAR} 
+            ]]>
+        </if>
+        order by t4.distance
+	</select>
+	
+	<!-- 查询推荐产品信息 -->
+	<select id="queryRecommendProductList" resultMap="ProductInfoMap" parameterType="String">
+		select
+		<include refid="Base_ProductInfo_Column_List" />
+		from t_product_info where f_product_id
+		in (select f_product_id from
+		t_recommend_product_info)
+		and f_product_verify_status = '01' and
+		f_product_overdue_time >=
+		curdate()
+	</select>
+	
+	<!-- 查询产品详情 -->
+	<select id="queryProductDetail" resultMap="ProductInfoMap"  parameterType="String">
+	    select 
+	    <include refid="Base_ProductInfo_Column_List"/>
+	    from t_product_info
+	    where f_product_id = #{productId,jdbcType=BIGINT}
+	</select>
+	<!-- 产品销售机构以及理财师关键表字段 -->
+	<resultMap type="ProductOrgPlannerDaoModel" id="ProductOrgPlannerMap">
+	    <result property="productId" column="f_product_id"/>
+	    <result property="orgId" column="f_sale_org_id"/>
+	    <result property="orgName" column="f_sale_org_name"/>
+	    <result property="orgLatitude" column="f_sale_org_latitude"/>
+	    <result property="orgLongtitude" column="f_sale_org_longtitude"/>
+	    <result property="orgCity" column="f_sale_org_city"/>
+	    <result property="orgDistrict" column="f_sale_org_district"/>
+	    <result property="plannerId" column="f_financial_planner_id"/>
+	    <result property="plannerIcon" column="f_financial_planner_icon"/>
+	    <result property="plannerName" column="f_financial_planner_name"/>
+	    <result property="plannerMobile" column="f_financial_planner_mobile"/>
+	    <result property="plannerPhone" column="f_financial_planner_webchat"/>
+	    <result property="plannerWebchat" column="f_financial_planner_webchat_pic"/>
+	    <result property="plannerQQ" column="f_financial_planner_qq"/>
+	    <result property="plannerAccount" column="f_financial_planner_account"/>
+	    <result property="plannerPwd" column="f_financial_planner_pwd"/>
+	</resultMap>
+	<!-- 根据productId查询销售机构以及理财师的信息 -->
+	<select id="queryPlannerOrgListByProductId" parameterType="String" resultMap="ProductOrgPlannerMap">
+	    select 
+	    t1.f_product_id,t1.f_sale_org_id,t3.f_sale_org_name,
+	    t3.f_sale_org_latitude,t3.f_sale_org_longtitude,t3.f_sale_org_city,
+	    t3.f_sale_org_district,t2.f_financial_planner_id,t2.f_financial_planner_icon,
+	    t2.f_financial_planner_name,t2.f_financial_planner_mobile,t2.f_financial_planner_webchat,
+	    t2.f_financial_planner_webchat_pic,t2.f_financial_planner_qq,t2.f_financial_planner_account,
+	    t2.f_financial_planner_pwd
+	    from t_product_saleorg_planner t1, t_financial_planner t2 , t_sale_org t3
+	    where t1.f_financial_planner_id = t2.f_financial_planner_id 
+	    and t1.f_sale_org_id = t3.f_sale_org_id
+	    and t1.f_product_id = #{productId,jdbcType=BIGINT}
+	</select>
+	<!-- *********************产品信息 end*********************** -->
+
+	<!-- *********************最高收益产品信息 begin*********************** -->
+	<resultMap type="ConfigedMostIncomeProductDaoModel" id="ConfigedMostIncomeProductMap">
+		<id column="f_id" property="id" />
+		<result column="f_year_income_rate_desc" property="yearIncomeRateDesc" />
+		<result column="f_product_limit_desc" property="limitDesc" />
+		<result column="f_min_sale_sum_desc" property="minSaleSumDesc" />
+		<result column="f_city" property="city" />
+		<result column="f_memo" property="memo" />
+	</resultMap>
+
+	<!-- 查询最高收益产品信息字段 -->
+	<sql id="Base_MostIncomeProductInfo_Column_List">
+		f_id,f_year_income_rate_desc,
+		f_product_limit_desc,
+		f_min_sale_sum_desc,
+		f_city,
+		f_memo
+	</sql>
+
+	<!-- 查询最高收益产品信息字段 -->
+	<select id="queryConfigedMostIncomeProductInfo" parameterType="String" resultMap="ConfigedMostIncomeProductMap">
+		select
+		<include refid="Base_MostIncomeProductInfo_Column_List" />
+		from t_most_income_product_info
+		<if test="city!=null and city!=''">
+		    where f_city = #{city,jdbcType=VARCHAR}
+		</if>
+	</select>
+	<!-- *********************最高收益产品信息 end*********************** -->
+
+	<!-- *********************收藏产品信息 begin*********************** -->
+	<resultMap type="ProductCollectionDaoModel" id="ProductCollectionMap">
+		<id column="f_product_collection_id" property="id" />
+		<result column="f_collection_product_id" property="productId" />
+		<result column="f_collection_investor_id" property="userId" />
+		<result column="f_collection_time" property="collectionTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+	    <result column="f_product_code" property="productCode" />
+		<result column="f_product_name" property="productName" />
+		<result column="f_product_year_income_rate" property="yearIncomeRate" />
+		<result column="f_product_limit" property="limit" />
+		<result column="f_product_min_invest_sum" property="minInvestSum" />
+		<result column="f_product_sale_start_time" property="saleStartTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_sale_end_time" property="saleEndTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_overdue_time" property="overdueTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+		<result column="f_product_verify_status" property="verifyStatus" />
+		<result column="f_product_type" property="type" />
+		<result column="f_product_sale_total_sum" property="saleTotalSum" />
+		<result column="f_product_sale_remain_sum" property="saleRemainSum" />
+		<result column="f_product_sale_saled_sum" property="saleSaledSum" />
+		<result column="f_product_risk_type" property="riskType" />
+		<result column="f_product_interest_pay_way_desc" property="interestPayDesc" />
+		<result column="f_product_desc" property="productDesc" />
+		<result column="f_product_org_name" property="orgName" />
+		<result column="f_product_memo" property="memo" />
+	</resultMap>
+	
+	<!-- 查询收藏产品信息的sql -->
+	<sql id="queryUserCollectionProductListSql">
+	    f_product_collection_id,f_collection_product_id,
+	    f_collection_investor_id,
+	    f_collection_time,f_product_code,
+		f_product_name,f_product_org_name,
+		f_product_year_income_rate,
+		f_product_limit, f_product_min_invest_sum,
+		f_product_sale_start_time,f_product_sale_end_time,f_product_overdue_time,
+		f_product_verify_status,f_product_type,f_product_sale_total_sum,
+		f_product_sale_remain_sum,f_product_sale_saled_sum,f_product_risk_type,
+		f_product_interest_pay_way_desc,f_product_desc,f_product_memo
+	</sql>
+
+	<!-- 查询用户收藏的产品列表 -->
+	<select id="queryUserCollectionProductList" parameterType="String" resultMap="ProductCollectionMap">
+	    select 
+	    <include refid="queryUserCollectionProductListSql"/>
+	    from t_product_collection t1,t_product_info t2 
+	    where t1.f_collection_product_id = t2.f_product_id 
+	    and t1.f_collection_investor_id = #{userId,jdbcType=BIGINT}
+	</select>
+	
+	<!-- 收藏产品的字段 -->
+	<sql id="collectProductSql">
+	    f_collection_product_id,f_collection_investor_id,
+	    f_collection_time,f_collection_memo
+	</sql>
+	
+	<!-- 收藏产品 -->
+	<insert id="collectProduct" parameterType="ProductCollectSaveDaoModel">
+	    insert into t_product_collection
+	    (
+	      <include refid="collectProductSql"/>
+	    )
+	    values
+	    (
+	      #{productId,jdbcType=BIGINT},
+		  #{userId,jdbcType=BIGINT},
+		  #{collectionTime,jdbcType=TIMESTAMP},
+		  #{memo,jdbcType=VARCHAR}
+	    )
+	</insert>
+	
+	<!-- 收藏产品的字段 -->
+	<sql id="queryCollectProductSql">
+	    f_product_collection_id,f_collection_product_id,
+	    f_collection_investor_id,
+	    f_collection_time,f_collection_memo
+	</sql>
+	
+	<!-- 收藏产品信息 -->
+	<resultMap type="ProductCollectSaveDaoModel" id="ProductCollectSaveDaoMap">
+	    <id column="f_product_collection_id" property="id"/>
+	    <result column="f_collection_investor_id" property="userId"/>
+	    <result column="f_collection_product_id" property="productId"/>
+	    <result column="f_collection_time" property="collectionTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+	    <result column="f_collection_memo" property="memo"/>
+	</resultMap>
+	
+	<!-- 判断对应的产品是否已经被收藏 -->
+	<select id="hasProductCollectByUser" resultMap="ProductCollectSaveDaoMap" parameterType="String">
+	    select 
+	    <include refid="queryCollectProductSql"/>
+	    from t_product_collection 
+	    where f_collection_investor_id = #{userId,jdbcType=BIGINT} 
+	    and f_collection_product_id = #{productId,jdbcType=BIGINT}
+	</select>
+	
+    <!-- 根据产品id和用户ID查询收藏的产品信息 -->
+	<select id="queryUserCollectByUserIdAndProductId" parameterType="String" resultMap ="ProductCollectionMap">
+	    select 
+	    <include refid="queryUserCollectionProductListSql"/>
+	    from t_product_collection t1,t_product_info t2 
+	    where t1.f_collection_product_id = t2.f_product_id 
+	    and t1.f_collection_investor_id = #{userId,jdbcType=BIGINT}
+	    and t1.f_collection_product_id = #{productId,jdbcType=BIGINT}
+	</select>
+	
+	<!-- 取消收藏 -->
+	<delete id="deleteCollectProductByCollectId" parameterType="String">
+	    delete from t_product_collection where f_product_collection_id = #{collectId,jdbcType=BIGINT}
+	</delete>
+	<!-- *********************收藏产品信息 end*********************** -->
+
+</mapper>

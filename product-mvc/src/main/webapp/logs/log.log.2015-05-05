@@ -1,0 +1,516 @@
+2015-05-05 23:38:04 [ main:1066 ] - [ DEBUG ] Adding [servletConfigInitParams] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1067 ] - [ DEBUG ] Adding [servletContextInitParams] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1068 ] - [ DEBUG ] Adding [jndiProperties] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1068 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1068 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1068 ] - [ DEBUG ] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+2015-05-05 23:38:04 [ main:1069 ] - [ DEBUG ] Initializing filter 'Set Character Encoding'
+2015-05-05 23:38:04 [ main:1074 ] - [ DEBUG ] Filter 'Set Character Encoding' configured successfully
+2015-05-05 23:38:04 [ main:1083 ] - [ DEBUG ] Initializing servlet 'mobile-server-dispatcher'
+2015-05-05 23:38:04 [ main:1084 ] - [ DEBUG ] Adding [servletConfigInitParams] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1085 ] - [ DEBUG ] Adding [servletContextInitParams] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1085 ] - [ DEBUG ] Adding [jndiProperties] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1085 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1085 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1085 ] - [ DEBUG ] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+2015-05-05 23:38:04 [ main:1094 ] - [ INFO ] FrameworkServlet 'mobile-server-dispatcher': initialization started
+2015-05-05 23:38:04 [ main:1094 ] - [ DEBUG ] Servlet with name 'mobile-server-dispatcher' will try to create custom WebApplicationContext context of class 'org.springframework.web.context.support.XmlWebApplicationContext', using parent context [Root WebApplicationContext: startup date [Tue May 05 23:38:03 CST 2015]; root of context hierarchy]
+2015-05-05 23:38:04 [ main:1094 ] - [ DEBUG ] Searching for key 'spring.profiles.active' in [servletConfigInitParams]
+2015-05-05 23:38:04 [ main:1094 ] - [ DEBUG ] Searching for key 'spring.profiles.active' in [servletContextInitParams]
+2015-05-05 23:38:04 [ main:1094 ] - [ DEBUG ] Searching for key 'spring.profiles.active' in [jndiProperties]
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] Looking up JNDI object with name [java:comp/env/spring.profiles.active]
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] Converted JNDI name [java:comp/env/spring.profiles.active] not found - trying original name [spring.profiles.active]. javax.naming.NameNotFoundException; remaining name 'spring.profiles.active'
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] Looking up JNDI object with name [spring.profiles.active]
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] JNDI lookup for name [spring.profiles.active] threw NamingException with message: null. Returning null.
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] Searching for key 'spring.profiles.active' in [systemProperties]
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] Searching for key 'spring.profiles.active' in [systemEnvironment]
+2015-05-05 23:38:04 [ main:1095 ] - [ DEBUG ] Could not find key 'spring.profiles.active' in any property source. Returning [null]
+2015-05-05 23:38:04 [ main:1096 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [servletConfigInitParams]
+2015-05-05 23:38:04 [ main:1096 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [servletContextInitParams]
+2015-05-05 23:38:04 [ main:1096 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [jndiProperties]
+2015-05-05 23:38:04 [ main:1096 ] - [ DEBUG ] Looking up JNDI object with name [java:comp/env/spring.profiles.default]
+2015-05-05 23:38:04 [ main:1096 ] - [ DEBUG ] Converted JNDI name [java:comp/env/spring.profiles.default] not found - trying original name [spring.profiles.default]. javax.naming.NameNotFoundException; remaining name 'spring.profiles.default'
+2015-05-05 23:38:04 [ main:1096 ] - [ DEBUG ] Looking up JNDI object with name [spring.profiles.default]
+2015-05-05 23:38:04 [ main:1097 ] - [ DEBUG ] JNDI lookup for name [spring.profiles.default] threw NamingException with message: null. Returning null.
+2015-05-05 23:38:04 [ main:1097 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [systemProperties]
+2015-05-05 23:38:04 [ main:1097 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [systemEnvironment]
+2015-05-05 23:38:04 [ main:1097 ] - [ DEBUG ] Could not find key 'spring.profiles.default' in any property source. Returning [null]
+2015-05-05 23:38:04 [ main:1097 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [servletConfigInitParams]
+2015-05-05 23:38:04 [ main:1097 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [servletContextInitParams]
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [jndiProperties]
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Looking up JNDI object with name [java:comp/env/spring.profiles.default]
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Converted JNDI name [java:comp/env/spring.profiles.default] not found - trying original name [spring.profiles.default]. javax.naming.NameNotFoundException; remaining name 'spring.profiles.default'
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Looking up JNDI object with name [spring.profiles.default]
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] JNDI lookup for name [spring.profiles.default] threw NamingException with message: null. Returning null.
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [systemProperties]
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Searching for key 'spring.profiles.default' in [systemEnvironment]
+2015-05-05 23:38:04 [ main:1098 ] - [ DEBUG ] Could not find key 'spring.profiles.default' in any property source. Returning [null]
+2015-05-05 23:38:04 [ main:1100 ] - [ DEBUG ] Replacing [servletContextInitParams] PropertySource with [servletContextInitParams]
+2015-05-05 23:38:04 [ main:1100 ] - [ DEBUG ] Replacing [servletConfigInitParams] PropertySource with [servletConfigInitParams]
+2015-05-05 23:38:04 [ main:1100 ] - [ INFO ] Refreshing WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': startup date [Tue May 05 23:38:04 CST 2015]; parent: Root WebApplicationContext
+2015-05-05 23:38:04 [ main:1101 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1101 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1101 ] - [ DEBUG ] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2015-05-05 23:38:04 [ main:1101 ] - [ INFO ] Loading XML bean definitions from class path resource [config/spring-servlet.xml]
+2015-05-05 23:38:04 [ main:1103 ] - [ DEBUG ] Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2015-05-05 23:38:04 [ main:1104 ] - [ DEBUG ] Loading schema mappings from [META-INF/spring.schemas]
+2015-05-05 23:38:04 [ main:1107 ] - [ DEBUG ] Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://cxf.apache.org/schemas/configuration/http-conf.xsd=schemas/configuration/http-conf.xsd, http://cxf.apache.org/configuration/parameterized-types=schemas/configuration/parameterized-types.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.alibaba.com/schema/springext/springext-base.xsd=META-INF/springext/springext-base.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://schemas.xmlsoap.org/ws/2004/08/addressing=schemas/wsdl/addressing.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.alibaba.com/schema/services/module-loader/factories/factories-base.xsd=META-INF/services/module-loader/factories/factories-base.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://schemas.xmlsoap.org/wsdl/=schemas/wsdl/wsdl.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.alibaba.com/schema/services/uris/uris-base.xsd=META-INF/services/uris/uris-base.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://schemas.xmlsoap.org/wsdl/http/=schemas/wsdl/http.xsd, http://code.alibabatech.com/schema/dubbo/dubbo.xsd=META-INF/dubbo.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://cxf.apache.org/schemas/configuration/parameterized-types.xsd=schemas/configuration/parameterized-types.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd=schemas/wsdl/wsdl.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://cxf.apache.org/schemas/wsdl/http-conf.xsd=schemas/wsdl/http-conf.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://cxf.apache.org/schemas/configuration/cxf-beans.xsd=schemas/configuration/cxf-beans.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://cxf.apache.org/schemas/core.xsd=schemas/core.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://cxf.apache.org/schemas/configuration/security.xsd=schemas/configuration/security.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://cxf.apache.org/schemas/configuration/soap.xsd=schemas/configuration/soap.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://cxf.apache.org/schemas/simple.xsd=schemas/simple.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd}
+2015-05-05 23:38:04 [ main:1108 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+2015-05-05 23:38:04 [ main:1124 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/mvc/spring-mvc.xsd] in classpath: org/springframework/web/servlet/config/spring-mvc-3.2.xsd
+2015-05-05 23:38:04 [ main:1129 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2015-05-05 23:38:04 [ main:1137 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/context/spring-context.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+2015-05-05 23:38:04 [ main:1144 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/aop/spring-aop.xsd] in classpath: org/springframework/aop/config/spring-aop-3.2.xsd
+2015-05-05 23:38:04 [ main:1153 ] - [ DEBUG ] Loading bean definitions
+2015-05-05 23:38:04 [ main:1155 ] - [ DEBUG ] Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://code.alibabatech.com/schema/dubbo=com.alibaba.dubbo.config.spring.schema.DubboNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://cxf.apache.org/transports/http/configuration=org.apache.cxf.transport.http.spring.NamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://cxf.apache.org/simple=org.apache.cxf.frontend.spring.NamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler, http://cxf.apache.org/core=org.apache.cxf.bus.spring.NamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://cxf.apache.org/bindings/soap=org.apache.cxf.binding.soap.spring.NamespaceHandler}
+2015-05-05 23:38:04 [ main:1172 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [com.hundsun.fund.product.mvc.interceptor.RequestInterceptor#0]
+2015-05-05 23:38:04 [ main:1184 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [com.hundsun.fund.product.mvc.interceptor.LoginInterceptor#0]
+2015-05-05 23:38:04 [ main:1227 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.web.servlet.i18n.LocaleChangeInterceptor#0]
+2015-05-05 23:38:04 [ main:1228 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [com.hundsun.fund.product.mvc.interceptor.PerformanceInterceptor#0]
+2015-05-05 23:38:04 [ main:1243 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1244 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2015-05-05 23:38:04 [ main:1244 ] - [ DEBUG ] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2015-05-05 23:38:04 [ main:1255 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller]
+2015-05-05 23:38:04 [ main:1255 ] - [ DEBUG ] Searching directory [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller] for files matching pattern [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller/**/*.class]
+2015-05-05 23:38:04 [ main:1258 ] - [ DEBUG ] Resolved location pattern [classpath*:com/hundsun/fund/product/mvc/controller/**/*.class] to resources [file [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller/BaseController.class], file [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller/ExceptionHandlerController.class], file [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller/UserController.class]]
+2015-05-05 23:38:04 [ main:1287 ] - [ DEBUG ] Identified candidate component class: file [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller/ExceptionHandlerController.class]
+2015-05-05 23:38:04 [ main:1291 ] - [ DEBUG ] Identified candidate component class: file [/Users/yanshengli/Documents/android widget/workspace/product/product-mvc/target/classes/com/hundsun/fund/product/mvc/controller/UserController.class]
+2015-05-05 23:38:04 [ main:1317 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter#0]
+2015-05-05 23:38:04 [ main:1333 ] - [ DEBUG ] Loaded 29 bean definitions from location pattern [classpath:config/spring-servlet.xml]
+2015-05-05 23:38:04 [ main:1333 ] - [ DEBUG ] Bean factory for WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': org.springframework.beans.factory.support.DefaultListableBeanFactory@10001: defining beans [org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.handler.MappedInterceptor#2,org.springframework.web.servlet.handler.MappedInterceptor#3,exceptionHandlerController,userController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#4,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,viewResolver,validator,localeResolver,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,multipartResolver,messageSource]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@40cd7252
+2015-05-05 23:38:04 [ main:1343 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1343 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1345 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1345 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1387 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1387 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1387 ] - [ INFO ] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1388 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1391 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1391 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2015-05-05 23:38:04 [ main:1391 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2015-05-05 23:38:04 [ main:1391 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2015-05-05 23:38:04 [ main:1391 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1391 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2015-05-05 23:38:04 [ main:1392 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2015-05-05 23:38:04 [ main:1392 ] - [ DEBUG ] Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2015-05-05 23:38:04 [ main:1405 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1419 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2015-05-05 23:38:04 [ main:1419 ] - [ DEBUG ] Creating shared instance of singleton bean 'messageSource'
+2015-05-05 23:38:04 [ main:1419 ] - [ DEBUG ] Creating instance of bean 'messageSource'
+2015-05-05 23:38:04 [ main:1436 ] - [ DEBUG ] Eagerly caching bean 'messageSource' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1449 ] - [ DEBUG ] Finished creating instance of bean 'messageSource'
+2015-05-05 23:38:04 [ main:1449 ] - [ DEBUG ] Using MessageSource [org.springframework.context.support.ReloadableResourceBundleMessageSource: basenames=[message]]
+2015-05-05 23:38:04 [ main:1450 ] - [ DEBUG ] Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@23936bc8]
+2015-05-05 23:38:04 [ main:1450 ] - [ DEBUG ] Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.DelegatingThemeSource@238929b7]
+2015-05-05 23:38:04 [ main:1454 ] - [ INFO ] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10001: defining beans [org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.handler.MappedInterceptor#2,org.springframework.web.servlet.handler.MappedInterceptor#3,exceptionHandlerController,userController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#4,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,viewResolver,validator,localeResolver,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,multipartResolver,messageSource,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@40cd7252
+2015-05-05 23:38:04 [ main:1454 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+2015-05-05 23:38:04 [ main:1454 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+2015-05-05 23:38:04 [ main:1457 ] - [ DEBUG ] Creating instance of bean 'com.hundsun.fund.product.mvc.interceptor.RequestInterceptor#0'
+2015-05-05 23:38:04 [ main:1463 ] - [ DEBUG ] Finished creating instance of bean 'com.hundsun.fund.product.mvc.interceptor.RequestInterceptor#0'
+2015-05-05 23:38:04 [ main:1466 ] - [ DEBUG ] No property editor [org.springframework.web.context.request.WebRequestInterceptorEditor] found for type org.springframework.web.context.request.WebRequestInterceptor according to 'Editor' suffix convention
+2015-05-05 23:38:04 [ main:1467 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.MappedInterceptor#0' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1470 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+2015-05-05 23:38:04 [ main:1470 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#1'
+2015-05-05 23:38:04 [ main:1470 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#1'
+2015-05-05 23:38:04 [ main:1470 ] - [ DEBUG ] Creating instance of bean 'com.hundsun.fund.product.mvc.interceptor.LoginInterceptor#0'
+2015-05-05 23:38:04 [ main:1474 ] - [ DEBUG ] Finished creating instance of bean 'com.hundsun.fund.product.mvc.interceptor.LoginInterceptor#0'
+2015-05-05 23:38:04 [ main:1475 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.MappedInterceptor#1' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1475 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#1'
+2015-05-05 23:38:04 [ main:1475 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#2'
+2015-05-05 23:38:04 [ main:1476 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#2'
+2015-05-05 23:38:04 [ main:1476 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.i18n.LocaleChangeInterceptor#0'
+2015-05-05 23:38:04 [ main:1479 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.i18n.LocaleChangeInterceptor#0'
+2015-05-05 23:38:04 [ main:1480 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.MappedInterceptor#2' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1480 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#2'
+2015-05-05 23:38:04 [ main:1480 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#3'
+2015-05-05 23:38:04 [ main:1480 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#3'
+2015-05-05 23:38:04 [ main:1480 ] - [ DEBUG ] Creating instance of bean 'com.hundsun.fund.product.mvc.interceptor.PerformanceInterceptor#0'
+2015-05-05 23:38:04 [ main:1486 ] - [ DEBUG ] Finished creating instance of bean 'com.hundsun.fund.product.mvc.interceptor.PerformanceInterceptor#0'
+2015-05-05 23:38:04 [ main:1486 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.MappedInterceptor#3' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1486 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#3'
+2015-05-05 23:38:04 [ main:1486 ] - [ DEBUG ] Creating shared instance of singleton bean 'exceptionHandlerController'
+2015-05-05 23:38:04 [ main:1487 ] - [ DEBUG ] Creating instance of bean 'exceptionHandlerController'
+2015-05-05 23:38:04 [ main:1490 ] - [ DEBUG ] Eagerly caching bean 'exceptionHandlerController' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1492 ] - [ DEBUG ] Finished creating instance of bean 'exceptionHandlerController'
+2015-05-05 23:38:04 [ main:1492 ] - [ DEBUG ] Creating shared instance of singleton bean 'userController'
+2015-05-05 23:38:04 [ main:1492 ] - [ DEBUG ] Creating instance of bean 'userController'
+2015-05-05 23:38:04 [ main:1496 ] - [ DEBUG ] Registered injected element on class [com.hundsun.fund.product.mvc.controller.UserController]: AutowiredFieldElement for private com.hundsun.fund.product.api.user.service.IUserService com.hundsun.fund.product.mvc.controller.UserController.userService
+2015-05-05 23:38:04 [ main:1496 ] - [ DEBUG ] Eagerly caching bean 'userController' to allow for resolving potential circular references
+2015-05-05 23:38:04 [ main:1502 ] - [ DEBUG ] Processing injected element of bean 'userController': AutowiredFieldElement for private com.hundsun.fund.product.api.user.service.IUserService com.hundsun.fund.product.mvc.controller.UserController.userService
+2015-05-05 23:38:04 [ main:1506 ] - [ DEBUG ] Returning cached instance of singleton bean 'userService'
+2015-05-05 23:38:04 [ main:1558 ] - [ DEBUG ]  [DUBBO] package com.alibaba.dubbo.registry;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+public class RegistryFactory$Adpative implements com.alibaba.dubbo.registry.RegistryFactory {
+public com.alibaba.dubbo.registry.Registry getRegistry(com.alibaba.dubbo.common.URL arg0) {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+com.alibaba.dubbo.common.URL url = arg0;
+String extName = ( url.getProtocol() == null ? "dubbo" : url.getProtocol() );
+if(extName == null) throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.registry.RegistryFactory) name from url(" + url.toString() + ") use keys([protocol])");
+com.alibaba.dubbo.registry.RegistryFactory extension = (com.alibaba.dubbo.registry.RegistryFactory)ExtensionLoader.getExtensionLoader(com.alibaba.dubbo.registry.RegistryFactory.class).getExtension(extName);
+return extension.getRegistry(arg0);
+}
+}, dubbo version: 2.5.3, current host: 127.0.0.1
+2015-05-05 23:38:04 [ main:1573 ] - [ DEBUG ]  [DUBBO] package com.alibaba.dubbo.remoting.zookeeper;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+public class ZookeeperTransporter$Adpative implements com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter {
+public com.alibaba.dubbo.remoting.zookeeper.ZookeeperClient connect(com.alibaba.dubbo.common.URL arg0) {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+com.alibaba.dubbo.common.URL url = arg0;
+String extName = url.getParameter("client", url.getParameter("transporter", "zkclient"));
+if(extName == null) throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter) name from url(" + url.toString() + ") use keys([client, transporter])");
+com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter extension = (com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter)ExtensionLoader.getExtensionLoader(com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter.class).getExtension(extName);
+return extension.connect(arg0);
+}
+}, dubbo version: 2.5.3, current host: 127.0.0.1
+2015-05-05 23:38:04 [ main:1601 ] - [ DEBUG ] Creating new ZookKeeper instance to connect to 127.0.0.1:2181.
+2015-05-05 23:38:04 [ ZkClient-EventThread-24-127.0.0.1:2181:1601 ] - [ INFO ] Starting ZkClient event thread.
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:host.name=192.168.1.109
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.version=1.7.0_71
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.vendor=Oracle Corporation
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.class.path=/Users/yanshengli/Documents/software/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.5.0.20140605-2032/jars/plexus-classworlds-2.5.1.jar
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.library.path=/Users/yanshengli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.io.tmpdir=/var/folders/w_/hyywstzd46d9z653t8fr13l80000gn/T/
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:java.compiler=<NA>
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:os.name=Mac OS X
+2015-05-05 23:38:04 [ main:1609 ] - [ INFO ] Client environment:os.arch=x86_64
+2015-05-05 23:38:04 [ main:1610 ] - [ INFO ] Client environment:os.version=10.9.5
+2015-05-05 23:38:04 [ main:1610 ] - [ INFO ] Client environment:user.name=yanshengli
+2015-05-05 23:38:04 [ main:1610 ] - [ INFO ] Client environment:user.home=/Users/yanshengli
+2015-05-05 23:38:04 [ main:1610 ] - [ INFO ] Client environment:user.dir=/Users/yanshengli/Documents/android widget/workspace/product/product-mvc
+2015-05-05 23:38:04 [ main:1610 ] - [ INFO ] Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1fd87384
+2015-05-05 23:38:04 [ main:1613 ] - [ DEBUG ] zookeeper.disableAutoWatchReset is false
+2015-05-05 23:38:04 [ main:1628 ] - [ DEBUG ] Awaiting connection to Zookeeper server
+2015-05-05 23:38:04 [ main:1630 ] - [ DEBUG ] Waiting for keeper state SyncConnected
+2015-05-05 23:38:04 [ main-SendThread(127.0.0.1:2181):1636 ] - [ INFO ] Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2015-05-05 23:38:04 [ main-SendThread(127.0.0.1:2181):1646 ] - [ INFO ] Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+2015-05-05 23:38:04 [ main-SendThread(127.0.0.1:2181):1648 ] - [ DEBUG ] Session establishment request sent on 127.0.0.1/127.0.0.1:2181
+2015-05-05 23:38:04 [ main-SendThread(127.0.0.1:2181):1652 ] - [ INFO ] Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x14d24b943c80001, negotiated timeout = 30000
+2015-05-05 23:38:04 [ main-EventThread:1654 ] - [ DEBUG ] Received event: WatchedEvent state:SyncConnected type:None path:null
+2015-05-05 23:38:04 [ main-EventThread:1654 ] - [ INFO ] zookeeper state changed (SyncConnected)
+2015-05-05 23:38:04 [ main-EventThread:1654 ] - [ DEBUG ] Leaving process event
+2015-05-05 23:38:04 [ main:1654 ] - [ DEBUG ] State is SyncConnected
+2015-05-05 23:38:04 [ main:1661 ] - [ DEBUG ]  [DUBBO] package com.alibaba.dubbo.rpc.cluster;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+public class RouterFactory$Adpative implements com.alibaba.dubbo.rpc.cluster.RouterFactory {
+public com.alibaba.dubbo.rpc.cluster.Router getRouter(com.alibaba.dubbo.common.URL arg0) {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+com.alibaba.dubbo.common.URL url = arg0;
+String extName = url.getProtocol();
+if(extName == null) throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.rpc.cluster.RouterFactory) name from url(" + url.toString() + ") use keys([protocol])");
+com.alibaba.dubbo.rpc.cluster.RouterFactory extension = (com.alibaba.dubbo.rpc.cluster.RouterFactory)ExtensionLoader.getExtensionLoader(com.alibaba.dubbo.rpc.cluster.RouterFactory.class).getExtension(extName);
+return extension.getRouter(arg0);
+}
+}, dubbo version: 2.5.3, current host: 127.0.0.1
+2015-05-05 23:38:04 [ main:1676 ] - [ DEBUG ]  [DUBBO] package com.alibaba.dubbo.rpc.cluster;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+public class ConfiguratorFactory$Adpative implements com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory {
+public com.alibaba.dubbo.rpc.cluster.Configurator getConfigurator(com.alibaba.dubbo.common.URL arg0) {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+com.alibaba.dubbo.common.URL url = arg0;
+String extName = url.getProtocol();
+if(extName == null) throw new IllegalStateException("Fail to get extension(com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory) name from url(" + url.toString() + ") use keys([protocol])");
+com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory extension = (com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory)ExtensionLoader.getExtensionLoader(com.alibaba.dubbo.rpc.cluster.ConfiguratorFactory.class).getExtension(extName);
+return extension.getConfigurator(arg0);
+}
+}, dubbo version: 2.5.3, current host: 127.0.0.1
+2015-05-05 23:38:04 [ main:1691 ] - [ INFO ]  [DUBBO] Register: consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=consumers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:04 [ main-SendThread(127.0.0.1:2181):1711 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 1,1  replyHeader:: 1,16165,-110  request:: '/dubbo,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1723 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 2,1  replyHeader:: 2,16166,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1725 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 3,1  replyHeader:: 3,16167,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/consumers,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1728 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 4,1  replyHeader:: 4,16168,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/consumers/consumer%253A%252F%252F192.168.1.109%252Fcom.hundsun.fund.product.api.user.service.IUserService%253Fapplication%253Ddubbo-mobile-server%2526category%253Dconsumers%2526check%253Dfalse%2526dubbo%253D2.5.3%2526interface%253Dcom.hundsun.fund.product.api.user.service.IUserService%2526methods%253DgetUserByUserid%2526pid%253D693%2526revision%253D1.0.0-SNAPSHOT%2526side%253Dconsumer%2526timestamp%253D1430840284789%2526version%253D1.0.0,,v{s{31,s{'world,'anyone}}},1  response:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/consumers/consumer%253A%252F%252F192.168.1.109%252Fcom.hundsun.fund.product.api.user.service.IUserService%253Fapplication%253Ddubbo-mobile-server%2526category%253Dconsumers%2526check%253Dfalse%2526dubbo%253D2.5.3%2526interface%253Dcom.hundsun.fund.product.api.user.service.IUserService%2526methods%253DgetUserByUserid%2526pid%253D693%2526revision%253D1.0.0-SNAPSHOT%2526side%253Dconsumer%2526timestamp%253D1430840284789%2526version%253D1.0.0 
+2015-05-05 23:38:05 [ main:1728 ] - [ INFO ]  [DUBBO] Subscribe: consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=providers,configurators,routers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1733 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 5,1  replyHeader:: 5,16169,-110  request:: '/dubbo,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1735 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 6,1  replyHeader:: 6,16170,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1737 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 7,1  replyHeader:: 7,16171,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/providers,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1743 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 8,3  replyHeader:: 8,16171,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/providers,T  response:: s{14134,14134,1430289060536,1430289060536,0,90,0,0,0,0,16161} 
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1746 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 9,8  replyHeader:: 9,16171,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/providers,T  response:: v{} 
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1748 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 10,1  replyHeader:: 10,16172,-110  request:: '/dubbo,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1751 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 11,1  replyHeader:: 11,16173,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1753 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 12,1  replyHeader:: 12,16174,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/configurators,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1755 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 13,3  replyHeader:: 13,16174,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/configurators,T  response:: s{14138,14138,1430289060557,1430289060557,0,0,0,0,0,0,14138} 
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1756 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 14,8  replyHeader:: 14,16174,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/configurators,T  response:: v{} 
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1758 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 15,1  replyHeader:: 15,16175,-110  request:: '/dubbo,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1761 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 16,1  replyHeader:: 16,16176,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1763 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 17,1  replyHeader:: 17,16177,-110  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/routers,,v{s{31,s{'world,'anyone}}},0  response::  
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1764 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 18,3  replyHeader:: 18,16177,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/routers,T  response:: s{14174,14174,1430289619547,1430289619547,0,0,0,0,0,0,14174} 
+2015-05-05 23:38:05 [ main-SendThread(127.0.0.1:2181):1766 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 19,8  replyHeader:: 19,16177,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/routers,T  response:: v{} 
+2015-05-05 23:38:05 [ main:1766 ] - [ INFO ]  [DUBBO] Notify urls for subscribe url consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=providers,configurators,routers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, urls: [empty://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=providers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, empty://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=configurators&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, empty://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=routers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0], dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:05 [ main:1769 ] - [ INFO ]  [DUBBO] Refer dubbo service com.hundsun.fund.product.api.user.service.IUserService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-mobile-server&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:05 [ main:1778 ] - [ DEBUG ] Autowiring by type from bean name 'userController' to bean named 'userService'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Finished creating instance of bean 'userController'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:1779 ] - [ DEBUG ] Creating instance of bean 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:1780 ] - [ DEBUG ] Eagerly caching bean 'mvcContentNegotiationManager' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:1790 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:1793 ] - [ DEBUG ] Finished creating instance of bean 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:1793 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+2015-05-05 23:38:05 [ main:1793 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+2015-05-05 23:38:05 [ main:1798 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:1811 ] - [ DEBUG ] Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:1812 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+2015-05-05 23:38:05 [ main:1812 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#1'
+2015-05-05 23:38:05 [ main:1812 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#2'
+2015-05-05 23:38:05 [ main:1812 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#3'
+2015-05-05 23:38:05 [ main:1813 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#4'
+2015-05-05 23:38:05 [ main:1813 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#4'
+2015-05-05 23:38:05 [ main:1813 ] - [ DEBUG ] Creating instance of bean '(inner bean)#1040c239'
+2015-05-05 23:38:05 [ main:1813 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+2015-05-05 23:38:05 [ main:1813 ] - [ DEBUG ] Creating instance of bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+2015-05-05 23:38:05 [ main:1814 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:1818 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+2015-05-05 23:38:05 [ main:1826 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+2015-05-05 23:38:05 [ main:1831 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#1040c239'
+2015-05-05 23:38:05 [ main:1832 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.MappedInterceptor#4' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:1832 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#4'
+2015-05-05 23:38:05 [ main:1832 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+2015-05-05 23:38:05 [ main:1832 ] - [ DEBUG ] Looking for request mappings in application context: WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': startup date [Tue May 05 23:38:04 CST 2015]; parent: Root WebApplicationContext
+2015-05-05 23:38:05 [ main:1844 ] - [ INFO ] Mapped "{[/user/getUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.hundsun.fund.product.mvc.model.user.UserGetRespModel com.hundsun.fund.product.mvc.controller.UserController.getUser(com.hundsun.fund.product.mvc.model.user.UserGetReqModel)
+2015-05-05 23:38:05 [ main:1846 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+2015-05-05 23:38:05 [ main:1847 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+2015-05-05 23:38:05 [ main:1847 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+2015-05-05 23:38:05 [ main:1847 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+2015-05-05 23:38:05 [ main:1975 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:1989 ] - [ DEBUG ] Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:1989 ] - [ DEBUG ] Creating instance of bean '(inner bean)#f539f0a'
+2015-05-05 23:38:05 [ main:1994 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+2015-05-05 23:38:05 [ main:1994 ] - [ DEBUG ] Creating shared instance of singleton bean 'validator'
+2015-05-05 23:38:05 [ main:1994 ] - [ DEBUG ] Creating instance of bean 'validator'
+2015-05-05 23:38:05 [ main:2001 ] - [ DEBUG ] Eagerly caching bean 'validator' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2008 ] - [ DEBUG ] Returning cached instance of singleton bean 'messageSource'
+2015-05-05 23:38:05 [ main:2018 ] - [ DEBUG ] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2015-05-05 23:38:05 [ main:2018 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'validator'
+2015-05-05 23:38:05 [ main:2035 ] - [ INFO ] HV000001: Hibernate Validator 4.3.2.Final
+2015-05-05 23:38:05 [ main:2041 ] - [ DEBUG ] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2015-05-05 23:38:05 [ main:2043 ] - [ DEBUG ] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2015-05-05 23:38:05 [ main:2043 ] - [ DEBUG ] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2015-05-05 23:38:05 [ main:2045 ] - [ DEBUG ] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2015-05-05 23:38:05 [ main:2049 ] - [ DEBUG ] No META-INF/validation.xml found. Using annotation based configuration only.
+2015-05-05 23:38:05 [ main:2089 ] - [ DEBUG ] Finished creating instance of bean 'validator'
+2015-05-05 23:38:05 [ main:2090 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#f539f0a'
+2015-05-05 23:38:05 [ main:2090 ] - [ DEBUG ] Creating instance of bean 'com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter#0'
+2015-05-05 23:38:05 [ main:2098 ] - [ DEBUG ] Finished creating instance of bean 'com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter#0'
+2015-05-05 23:38:05 [ main:2099 ] - [ DEBUG ] Creating instance of bean '(inner bean)#33fc9671'
+2015-05-05 23:38:05 [ main:2105 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#33fc9671'
+2015-05-05 23:38:05 [ main:2105 ] - [ DEBUG ] Creating instance of bean '(inner bean)#2379cbe3'
+2015-05-05 23:38:05 [ main:2109 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#2379cbe3'
+2015-05-05 23:38:05 [ main:2110 ] - [ DEBUG ] Creating instance of bean '(inner bean)#2d4e753a'
+2015-05-05 23:38:05 [ main:2114 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#2d4e753a'
+2015-05-05 23:38:05 [ main:2115 ] - [ DEBUG ] Creating instance of bean '(inner bean)#372795e2'
+2015-05-05 23:38:05 [ main:2121 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#372795e2'
+2015-05-05 23:38:05 [ main:2121 ] - [ DEBUG ] Creating instance of bean '(inner bean)#2d9b2236'
+2015-05-05 23:38:05 [ main:2128 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#2d9b2236'
+2015-05-05 23:38:05 [ main:2129 ] - [ DEBUG ] Creating instance of bean '(inner bean)#60a90415'
+2015-05-05 23:38:05 [ main:2153 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#60a90415'
+2015-05-05 23:38:05 [ main:2154 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+2015-05-05 23:38:05 [ main:2176 ] - [ DEBUG ] Looking for controller advice: WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': startup date [Tue May 05 23:38:04 CST 2015]; parent: Root WebApplicationContext
+2015-05-05 23:38:05 [ main:2178 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+2015-05-05 23:38:05 [ main:2179 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#4'
+2015-05-05 23:38:05 [ main:2179 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2179 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2187 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2195 ] - [ DEBUG ] Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+2015-05-05 23:38:05 [ main:2195 ] - [ DEBUG ] Creating instance of bean 'com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter#0#1'
+2015-05-05 23:38:05 [ main:2196 ] - [ DEBUG ] Finished creating instance of bean 'com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter#0#1'
+2015-05-05 23:38:05 [ main:2196 ] - [ DEBUG ] Creating instance of bean '(inner bean)#33fc9671#1'
+2015-05-05 23:38:05 [ main:2197 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#33fc9671#1'
+2015-05-05 23:38:05 [ main:2197 ] - [ DEBUG ] Creating instance of bean '(inner bean)#2379cbe3#1'
+2015-05-05 23:38:05 [ main:2199 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#2379cbe3#1'
+2015-05-05 23:38:05 [ main:2199 ] - [ DEBUG ] Creating instance of bean '(inner bean)#2d4e753a#1'
+2015-05-05 23:38:05 [ main:2201 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#2d4e753a#1'
+2015-05-05 23:38:05 [ main:2202 ] - [ DEBUG ] Creating instance of bean '(inner bean)#372795e2#1'
+2015-05-05 23:38:05 [ main:2210 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#372795e2#1'
+2015-05-05 23:38:05 [ main:2211 ] - [ DEBUG ] Creating instance of bean '(inner bean)#2d9b2236#1'
+2015-05-05 23:38:05 [ main:2215 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#2d9b2236#1'
+2015-05-05 23:38:05 [ main:2216 ] - [ DEBUG ] Creating instance of bean '(inner bean)#60a90415#1'
+2015-05-05 23:38:05 [ main:2219 ] - [ DEBUG ] Finished creating instance of bean '(inner bean)#60a90415#1'
+2015-05-05 23:38:05 [ main:2220 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2220 ] - [ DEBUG ] Looking for exception mappings: WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': startup date [Tue May 05 23:38:04 CST 2015]; parent: Root WebApplicationContext
+2015-05-05 23:38:05 [ main:2223 ] - [ INFO ] Detected @ExceptionHandler methods in exceptionHandlerController
+2015-05-05 23:38:05 [ main:2223 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2224 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2224 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2224 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2229 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2229 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2229 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2230 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2235 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2235 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+2015-05-05 23:38:05 [ main:2235 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+2015-05-05 23:38:05 [ main:2237 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#1'
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#2'
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#3'
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#4'
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Looking for URL mappings in application context: WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': startup date [Tue May 05 23:38:04 CST 2015]; parent: Root WebApplicationContext
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.MappedInterceptor#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2246 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.MappedInterceptor#1': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.MappedInterceptor#2': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.MappedInterceptor#3': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'exceptionHandlerController': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'userController': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.context.annotation.internalRequiredAnnotationProcessor': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.context.annotation.internalCommonAnnotationProcessor': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.aop.config.internalAutoProxyCreator': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+2015-05-05 23:38:05 [ main:2247 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.MappedInterceptor#4': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter': no URL paths identified
+2015-05-05 23:38:05 [ main:2248 ] - [ DEBUG ] Rejected bean name 'viewResolver': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'validator': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'localeResolver': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'multipartResolver': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'messageSource': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'environment': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'systemProperties': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'systemEnvironment': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'servletConfig': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+2015-05-05 23:38:05 [ main:2249 ] - [ DEBUG ] Rejected bean name 'applicationEventMulticaster': no URL paths identified
+2015-05-05 23:38:05 [ main:2250 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+2015-05-05 23:38:05 [ main:2250 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+2015-05-05 23:38:05 [ main:2250 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+2015-05-05 23:38:05 [ main:2250 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2253 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+2015-05-05 23:38:05 [ main:2253 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+2015-05-05 23:38:05 [ main:2253 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+2015-05-05 23:38:05 [ main:2253 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2256 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+2015-05-05 23:38:05 [ main:2256 ] - [ DEBUG ] Creating shared instance of singleton bean 'viewResolver'
+2015-05-05 23:38:05 [ main:2256 ] - [ DEBUG ] Creating instance of bean 'viewResolver'
+2015-05-05 23:38:05 [ main:2266 ] - [ DEBUG ] Eagerly caching bean 'viewResolver' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2280 ] - [ DEBUG ] Finished creating instance of bean 'viewResolver'
+2015-05-05 23:38:05 [ main:2280 ] - [ DEBUG ] Returning cached instance of singleton bean 'validator'
+2015-05-05 23:38:05 [ main:2280 ] - [ DEBUG ] Creating shared instance of singleton bean 'localeResolver'
+2015-05-05 23:38:05 [ main:2280 ] - [ DEBUG ] Creating instance of bean 'localeResolver'
+2015-05-05 23:38:05 [ main:2283 ] - [ DEBUG ] Eagerly caching bean 'localeResolver' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2288 ] - [ DEBUG ] Finished creating instance of bean 'localeResolver'
+2015-05-05 23:38:05 [ main:2289 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2015-05-05 23:38:05 [ main:2289 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2015-05-05 23:38:05 [ main:2290 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2301 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2015-05-05 23:38:05 [ main:2302 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2015-05-05 23:38:05 [ main:2303 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2015-05-05 23:38:05 [ main:2306 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2015-05-05 23:38:05 [ main:2307 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2335 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+2015-05-05 23:38:05 [ main:2337 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#1'
+2015-05-05 23:38:05 [ main:2337 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#2'
+2015-05-05 23:38:05 [ main:2337 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#3'
+2015-05-05 23:38:05 [ main:2337 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#4'
+2015-05-05 23:38:05 [ main:2337 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2015-05-05 23:38:05 [ main:2338 ] - [ INFO ] Mapped URL path [/resource/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2015-05-05 23:38:05 [ main:2338 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2015-05-05 23:38:05 [ main:2338 ] - [ DEBUG ] Creating shared instance of singleton bean 'multipartResolver'
+2015-05-05 23:38:05 [ main:2338 ] - [ DEBUG ] Creating instance of bean 'multipartResolver'
+2015-05-05 23:38:05 [ main:2349 ] - [ DEBUG ] Eagerly caching bean 'multipartResolver' to allow for resolving potential circular references
+2015-05-05 23:38:05 [ main:2358 ] - [ DEBUG ] Finished creating instance of bean 'multipartResolver'
+2015-05-05 23:38:05 [ main:2358 ] - [ DEBUG ] Returning cached instance of singleton bean 'messageSource'
+2015-05-05 23:38:05 [ main:2358 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2015-05-05 23:38:05 [ main:2358 ] - [ DEBUG ] Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@bd44f2f]
+2015-05-05 23:38:05 [ main:2358 ] - [ DEBUG ] Returning cached instance of singleton bean 'lifecycleProcessor'
+2015-05-05 23:38:05 [ main:2359 ] - [ DEBUG ] Returning cached instance of singleton bean 'multipartResolver'
+2015-05-05 23:38:05 [ main:2359 ] - [ DEBUG ] Using MultipartResolver [org.springframework.web.multipart.commons.CommonsMultipartResolver@1f9a9cba]
+2015-05-05 23:38:05 [ main:2359 ] - [ DEBUG ] Returning cached instance of singleton bean 'localeResolver'
+2015-05-05 23:38:05 [ main:2359 ] - [ DEBUG ] Using LocaleResolver [org.springframework.web.servlet.i18n.CookieLocaleResolver@5fa7878b]
+2015-05-05 23:38:05 [ main:2360 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+2015-05-05 23:38:05 [ main:2366 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+2015-05-05 23:38:05 [ main:2366 ] - [ DEBUG ] Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@55f5daa7]
+2015-05-05 23:38:05 [ main:2367 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+2015-05-05 23:38:05 [ main:2371 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+2015-05-05 23:38:05 [ main:2371 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2015-05-05 23:38:05 [ main:2372 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+2015-05-05 23:38:05 [ main:2374 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+2015-05-05 23:38:05 [ main:2374 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+2015-05-05 23:38:05 [ main:2375 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2375 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2376 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+2015-05-05 23:38:05 [ main:2377 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+2015-05-05 23:38:05 [ main:2380 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+2015-05-05 23:38:05 [ main:2380 ] - [ DEBUG ] Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5ee553cf]
+2015-05-05 23:38:05 [ main:2380 ] - [ DEBUG ] Returning cached instance of singleton bean 'viewResolver'
+2015-05-05 23:38:05 [ main:2382 ] - [ DEBUG ] Creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+2015-05-05 23:38:05 [ main:2390 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+2015-05-05 23:38:05 [ main:2390 ] - [ DEBUG ] Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@1ed54e74]
+2015-05-05 23:38:05 [ main:2390 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [servletConfigInitParams]
+2015-05-05 23:38:05 [ main:2390 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [servletContextInitParams]
+2015-05-05 23:38:05 [ main:2390 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [jndiProperties]
+2015-05-05 23:38:05 [ main:2391 ] - [ DEBUG ] Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+2015-05-05 23:38:05 [ main:2391 ] - [ DEBUG ] Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException; remaining name 'spring.liveBeansView.mbeanDomain'
+2015-05-05 23:38:05 [ main:2391 ] - [ DEBUG ] Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+2015-05-05 23:38:05 [ main:2391 ] - [ DEBUG ] JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: null. Returning null.
+2015-05-05 23:38:05 [ main:2391 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2015-05-05 23:38:05 [ main:2391 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2015-05-05 23:38:05 [ main:2392 ] - [ DEBUG ] Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+2015-05-05 23:38:05 [ main:2392 ] - [ DEBUG ] Published WebApplicationContext of servlet 'mobile-server-dispatcher' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.mobile-server-dispatcher]
+2015-05-05 23:38:05 [ main:2392 ] - [ INFO ] FrameworkServlet 'mobile-server-dispatcher': initialization completed in 1298 ms
+2015-05-05 23:38:05 [ main:2392 ] - [ DEBUG ] Servlet 'mobile-server-dispatcher' configured successfully
+2015-05-05 23:38:15 [ main-SendThread(127.0.0.1:2181):11768 ] - [ DEBUG ] Got ping response for sessionid: 0x14d24b943c80001 after 0ms
+2015-05-05 23:38:15 [ qtp1978541334-18:12523 ] - [ DEBUG ] DispatcherServlet with name 'mobile-server-dispatcher' processing GET request for [/mobile/user/getUser]
+2015-05-05 23:38:15 [ qtp1978541334-18:12524 ] - [ DEBUG ] Looking up handler method for path /user/getUser
+2015-05-05 23:38:15 [ qtp1978541334-18:12526 ] - [ DEBUG ] Returning handler method [public com.hundsun.fund.product.mvc.model.user.UserGetRespModel com.hundsun.fund.product.mvc.controller.UserController.getUser(com.hundsun.fund.product.mvc.model.user.UserGetReqModel)]
+2015-05-05 23:38:15 [ qtp1978541334-18:12526 ] - [ DEBUG ] Returning cached instance of singleton bean 'userController'
+2015-05-05 23:38:15 [ qtp1978541334-18:12527 ] - [ DEBUG ] Last-Modified value for [/mobile/user/getUser] is: -1
+2015-05-05 23:38:15 [ qtp1978541334-18:12531 ] - [ DEBUG ] Resolving exception from handler [public com.hundsun.fund.product.mvc.model.user.UserGetRespModel com.hundsun.fund.product.mvc.controller.UserController.getUser(com.hundsun.fund.product.mvc.model.user.UserGetReqModel)]: com.hundsun.fund.product.commons.exception.BusinessException
+2015-05-05 23:38:15 [ qtp1978541334-18:12533 ] - [ DEBUG ] Returning cached instance of singleton bean 'exceptionHandlerController'
+2015-05-05 23:38:15 [ qtp1978541334-18:12534 ] - [ DEBUG ] Invoking @ExceptionHandler method: public com.hundsun.fund.product.mvc.model.base.BaseRespModel com.hundsun.fund.product.mvc.controller.ExceptionHandlerController.handleException(java.lang.Exception,javax.servlet.http.HttpServletRequest)
+2015-05-05 23:38:16 [ qtp1978541334-18:12831 ] - [ DEBUG ] Written [com.hundsun.fund.product.mvc.model.user.UserGetRespModel@19eb8d1c] as "application/json;charset=UTF-8" using [com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter@45ef0b40]
+2015-05-05 23:38:16 [ qtp1978541334-18:12832 ] - [ DEBUG ] Null ModelAndView returned to DispatcherServlet with name 'mobile-server-dispatcher': assuming HandlerAdapter completed request handling
+2015-05-05 23:38:16 [ qtp1978541334-18:12832 ] - [ DEBUG ] Successfully completed request
+2015-05-05 23:38:25 [ main-SendThread(127.0.0.1:2181):21770 ] - [ DEBUG ] Got ping response for sessionid: 0x14d24b943c80001 after 0ms
+2015-05-05 23:38:29 [ DubboShutdownHook:25913 ] - [ INFO ]  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ DubboShutdownHook:25914 ] - [ INFO ]  [DUBBO] Close all registries [zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-mobile-server&check=false&dubbo=2.5.3&file=false&interface=com.alibaba.dubbo.registry.RegistryService&pid=693&timestamp=1430840284829], dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ DubboShutdownHook:25914 ] - [ INFO ]  [DUBBO] Destroy registry:zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-mobile-server&check=false&dubbo=2.5.3&file=false&interface=com.alibaba.dubbo.registry.RegistryService&pid=693&timestamp=1430840284829, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ DubboShutdownHook:25915 ] - [ INFO ]  [DUBBO] Unregister: consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=consumers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ main-SendThread(127.0.0.1:2181):25918 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 20,2  replyHeader:: 20,16178,0  request:: '/dubbo/com.hundsun.fund.product.api.user.service.IUserService/consumers/consumer%253A%252F%252F192.168.1.109%252Fcom.hundsun.fund.product.api.user.service.IUserService%253Fapplication%253Ddubbo-mobile-server%2526category%253Dconsumers%2526check%253Dfalse%2526dubbo%253D2.5.3%2526interface%253Dcom.hundsun.fund.product.api.user.service.IUserService%2526methods%253DgetUserByUserid%2526pid%253D693%2526revision%253D1.0.0-SNAPSHOT%2526side%253Dconsumer%2526timestamp%253D1430840284789%2526version%253D1.0.0,-1  response:: null
+2015-05-05 23:38:29 [ DubboShutdownHook:25918 ] - [ INFO ]  [DUBBO] Destroy unregister url consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=consumers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ DubboShutdownHook:25918 ] - [ INFO ]  [DUBBO] Unsubscribe: consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=providers,configurators,routers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ DubboShutdownHook:25919 ] - [ INFO ]  [DUBBO] Destroy unsubscribe url consumer://192.168.1.109/com.hundsun.fund.product.api.user.service.IUserService?application=dubbo-mobile-server&category=providers,configurators,routers&check=false&dubbo=2.5.3&interface=com.hundsun.fund.product.api.user.service.IUserService&methods=getUserByUserid&pid=693&revision=1.0.0-SNAPSHOT&side=consumer&timestamp=1430840284789&version=1.0.0, dubbo version: 2.5.3, current host: 192.168.1.109
+2015-05-05 23:38:29 [ DubboShutdownHook:25919 ] - [ DEBUG ] Closing ZkClient...
+2015-05-05 23:38:29 [ ZkClient-EventThread-24-127.0.0.1:2181:25919 ] - [ INFO ] Terminate ZkClient event thread.
+2015-05-05 23:38:29 [ DubboShutdownHook:25919 ] - [ DEBUG ] Closing ZooKeeper connected to 127.0.0.1:2181
+2015-05-05 23:38:29 [ DubboShutdownHook:25920 ] - [ DEBUG ] Closing session: 0x14d24b943c80001
+2015-05-05 23:38:29 [ DubboShutdownHook:25920 ] - [ DEBUG ] Closing client for session: 0x14d24b943c80001
+2015-05-05 23:38:29 [ main-SendThread(127.0.0.1:2181):25921 ] - [ DEBUG ] Reading reply sessionid:0x14d24b943c80001, packet:: clientPath:null serverPath:null finished:false header:: 21,-11  replyHeader:: 21,16179,0  request:: null response:: null
+2015-05-05 23:38:29 [ DubboShutdownHook:25921 ] - [ DEBUG ] Disconnecting client for session: 0x14d24b943c80001
+2015-05-05 23:38:29 [ DubboShutdownHook:25921 ] - [ INFO ] Session: 0x14d24b943c80001 closed
+2015-05-05 23:38:29 [ main-SendThread(127.0.0.1:2181):25921 ] - [ DEBUG ] An exception was thrown while closing send thread for session 0x14d24b943c80001 : Unable to read additional data from server sessionid 0x14d24b943c80001, likely server has closed socket
+2015-05-05 23:38:29 [ DubboShutdownHook:25922 ] - [ DEBUG ] Closing ZkClient...done
+2015-05-05 23:38:29 [ main-EventThread:25921 ] - [ INFO ] EventThread shut down
+2015-05-05 23:38:29 [ Thread-2:26420 ] - [ INFO ] Closing WebApplicationContext for namespace 'mobile-server-dispatcher-servlet': startup date [Tue May 05 23:38:04 CST 2015]; parent: Root WebApplicationContext
+2015-05-05 23:38:29 [ Thread-2:26421 ] - [ DEBUG ] Returning cached instance of singleton bean 'lifecycleProcessor'
+2015-05-05 23:38:29 [ Thread-2:26421 ] - [ INFO ] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10001: defining beans [org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.handler.MappedInterceptor#2,org.springframework.web.servlet.handler.MappedInterceptor#3,exceptionHandlerController,userController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#4,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,viewResolver,validator,localeResolver,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,multipartResolver,messageSource,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@40cd7252
+2015-05-05 23:38:29 [ Thread-2:26423 ] - [ DEBUG ] Retrieved dependent beans for bean 'com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter#0#1': [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0]
+2015-05-05 23:38:29 [ Thread-2:26424 ] - [ DEBUG ] Retrieved dependent beans for bean '(inner bean)#f539f0a': [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0]
+2015-05-05 23:38:29 [ Thread-2:26425 ] - [ DEBUG ] Retrieved dependent beans for bean '(inner bean)#1040c239': [org.springframework.web.servlet.handler.MappedInterceptor#4]
+2015-05-05 23:38:29 [ Thread-2:26425 ] - [ DEBUG ] Retrieved dependent beans for bean 'com.hundsun.fund.product.mvc.interceptor.PerformanceInterceptor#0': [org.springframework.web.servlet.handler.MappedInterceptor#3]
+2015-05-05 23:38:29 [ Thread-2:26425 ] - [ DEBUG ] Retrieved dependent beans for bean 'org.springframework.web.servlet.i18n.LocaleChangeInterceptor#0': [org.springframework.web.servlet.handler.MappedInterceptor#2]
+2015-05-05 23:38:29 [ Thread-2:26425 ] - [ DEBUG ] Retrieved dependent beans for bean 'com.hundsun.fund.product.mvc.interceptor.LoginInterceptor#0': [org.springframework.web.servlet.handler.MappedInterceptor#1]
+2015-05-05 23:38:29 [ Thread-2:26426 ] - [ DEBUG ] Retrieved dependent beans for bean 'com.hundsun.fund.product.mvc.interceptor.RequestInterceptor#0': [org.springframework.web.servlet.handler.MappedInterceptor#0]

@@ -22,11 +22,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.hundsun.fund</groupId>
-			<artifactId>product-model</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.hundsun.fund</groupId>
 			<artifactId>provider-mongo</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>

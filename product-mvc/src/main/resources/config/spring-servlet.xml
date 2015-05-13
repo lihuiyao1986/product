@@ -12,30 +12,69 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="com.hundsun.fund.product.mvc.interceptor.RequestInterceptor" />
-		</mvc:interceptor>
-		<mvc:interceptor>
-			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/user/userinfo_query_by_uuid.json"/>
+			<mvc:exclude-mapping path="/user/userinfo_edit.json"/>
+			<mvc:exclude-mapping path="/product/recommend_list.json"/>
+			<mvc:exclude-mapping path="/product/product_list_query.json"/>
+			<mvc:exclude-mapping path="/common/producttype_dict_query.json"/>
+			<mvc:exclude-mapping path="/common/risktype_dict_query.json"/>
+			<mvc:exclude-mapping path="/common/product_verify_status_dict_query.json"/>
+			<mvc:exclude-mapping path="/product/detail_query.json"/>
+			<mvc:exclude-mapping path="/product/configed_most_income_query.json"/>
 			<bean class="com.hundsun.fund.product.mvc.interceptor.LoginInterceptor" />
 		</mvc:interceptor>
+		<mvc:interceptor>
+		    <mvc:mapping path="/**"/>
+		    <bean class="com.hundsun.fund.product.mvc.interceptor.PerformanceInterceptor"/>
+		</mvc:interceptor>
 	</mvc:interceptors>
-	
+
 	<!-- 扫描controller -->
 	<context:component-scan base-package="com.hundsun.fund.product.mvc.controller" use-default-filters="false">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
 
 	<!-- @AspectJ支持 -->
-	<aop:aspectj-autoproxy />
-	
-	<!-- @controler等mvc注解驱动-->
-	 <mvc:annotation-driven>
-		<!--fastjson配置，替换默认的jackson  -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- @controler等mvc注解驱动 -->
+	<mvc:annotation-driven validator="validator">
 		<mvc:message-converters>
 			<bean class="com.hundsun.fund.product.mvc.converter.FastJsonpHttpMessageConverter" />
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 
+	<!-- viewResolver -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 以下 validator ConversionService 在使用 mvc:annotation-driven 会 自动注册 -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
 	<!-- 静态资源获取，不用后台映射 -->
 	<mvc:resources mapping="/resource/**" location="/resource/" />
+
+	<!-- 配置springMVC处理上传文件的信息 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="maxUploadSize" value="10485760000" />
+		<property name="maxInMemorySize" value="40960" />
+	</bean>
+
+	<!-- 消息 -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="useCodeAsDefaultMessage" value="true" />
+		<property name="cacheSeconds" value="10" />
+		<property name="basenames">
+			<list>
+				<value>message</value>
+			</list>
+		</property>
+	</bean>
 </beans>

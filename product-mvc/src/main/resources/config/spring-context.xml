@@ -16,14 +16,4 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<property name="useCodeAsDefaultMessage" value="true" />
-		<property name="cacheSeconds" value="10"/>
-		<property name="basenames">
-			<list>
-				<value>config/message</value>
-			</list>
-		</property>
-	</bean>
-
 </beans>

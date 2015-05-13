@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>product-mvc</artifactId>
 	<packaging>war</packaging>
-	<name>product-mv</name>
+	<name>product-mvc</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -29,17 +29,17 @@
 		</dependency>
 		<dependency>
 			<groupId>com.hundsun.fund</groupId>
-			<artifactId>product-api-query</artifactId>
+			<artifactId>product-api-product</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+			<dependency>
+			<groupId>com.hundsun.fund</groupId>
+			<artifactId>product-api-common</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.hundsun.fund</groupId>
 			<artifactId>product-commons</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.hundsun.fund</groupId>
-			<artifactId>product-model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
